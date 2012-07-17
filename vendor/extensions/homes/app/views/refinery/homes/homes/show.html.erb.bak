@@ -1,0 +1,51 @@
+<% content_for :body_content_title do %>
+  <%= @home.name %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @home.name %>
+    </p>
+  </section>
+  <section>
+    <h1>Description</h1>
+    <p>
+      <%=raw @home.description %>
+    </p>
+  </section>
+  <section>
+    <h1>Price</h1>
+    <p>
+      <%=raw @home.price %>
+    </p>
+  </section>
+  <section>
+    <h1>Square Feet</h1>
+    <p>
+      <%=raw @home.square_feet %>
+    </p>
+  </section>
+  <section>
+    <h1>Photo</h1>
+    <p>
+      <%= image_fu @home.photo, nil %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="homes">
+      <% @homes.each do |home| %>
+        <li>
+          <%= link_to home.name, refinery.homes_home_path(home) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

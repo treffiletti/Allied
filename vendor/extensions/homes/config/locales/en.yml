@@ -1,0 +1,31 @@
+en:
+  refinery:
+    plugins:
+      homes:
+        title: Homes
+    homes:
+      admin:
+        homes:
+          actions:
+            create_new: Add New Home
+            reorder: Reorder Homes
+            reorder_done: Done Reordering Homes
+          records:
+            title: Homes
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Homes yet. Click "Add New Home" to add your first home.
+          home:
+            view_live_html: View this home live <br/><em>(opens in a new window)</em>
+            edit: Edit this home
+            delete: Remove this home forever
+      homes:
+        show:
+          other: Other Homes
+  activerecord:
+    attributes:
+      'refinery/homes/home':
+        name: Name
+        description: Description
+        price: Price
+        square_feet: Square Feet
+        photo: photo

@@ -1,0 +1,30 @@
+fr:
+  refinery:
+    plugins:
+      sites:
+        title: Sites
+    sites:
+      admin:
+        sites:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Site
+            reorder: Réordonner les Sites
+            reorder_done: Fin de réordonnancement des Sites
+          records:
+            title: Sites
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Site. Cliquer sur "Créer un(e) nouve(au/l/lle) Site" pour créer votre premi(er/ère) site.'
+          site:
+            view_live_html: Voir ce(t/tte) site <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) site
+            delete: Supprimer définitivement ce(t/tte) site
+      sites:
+        show:
+          other: Autres Sites
+  activerecord:
+    attributes:
+      'refinery/sites/site':
+        name: Name
+        description: Description
+        photo: Photo
+        location: Location

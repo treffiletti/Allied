@@ -1,0 +1,30 @@
+en:
+  refinery:
+    plugins:
+      sites:
+        title: Sites
+    sites:
+      admin:
+        sites:
+          actions:
+            create_new: Add New Site
+            reorder: Reorder Sites
+            reorder_done: Done Reordering Sites
+          records:
+            title: Sites
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Sites yet. Click "Add New Site" to add your first site.
+          site:
+            view_live_html: View this site live <br/><em>(opens in a new window)</em>
+            edit: Edit this site
+            delete: Remove this site forever
+      sites:
+        show:
+          other: Other Sites
+  activerecord:
+    attributes:
+      'refinery/sites/site':
+        name: Name
+        description: Description
+        photo: Photo
+        location: Location

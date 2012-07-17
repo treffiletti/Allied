@@ -1,0 +1,20 @@
+<div id="site" class="container">
+  <div class="row">
+    <div class="span4">
+      <%= image_fu @site.photo, "370x320", class: "image-align-left" %>          
+    </div>
+    <div class="span8">
+      <h1><%= @site.name %></h1>
+      <%= raw @site.description %>
+      <h3>Homes in this Site</h3>
+      <div class="homes">
+        <% @site.homes.each do |home| %>
+        <div class="homeThumb">
+          <%= image_fu home.photo, "125x100", class: "image-align-left" %>
+        </div>
+        <% end %>
+      </div>
+      <!-- <p><%= link_to "Back to Sites", refinery.sites_sites_path %></p> -->
+    </div>
+  </div>
+</div>

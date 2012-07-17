@@ -1,0 +1,31 @@
+nl:
+  refinery:
+    plugins:
+      homes:
+        title: Homes
+    homes:
+      admin:
+        homes:
+          actions:
+            create_new: Maak een nieuwe Home
+            reorder: Wijzig de volgorde van de Homes
+            reorder_done: Klaar met het wijzingen van de volgorde van de Homes
+          records:
+            title: Homes
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Homes. Druk op 'Maak een nieuwe Home' om de eerste aan te maken.
+          home:
+            view_live_html: Bekijk deze home op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze home
+            delete: Verwijder deze home voor eeuwig
+      homes:
+        show:
+          other: Andere Homes
+  activerecord:
+    attributes:
+      'refinery/homes/home':
+        name: Name
+        description: Description
+        price: Price
+        square_feet: Square Feet
+        photo: photo

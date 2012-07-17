@@ -1,0 +1,30 @@
+nb:
+  refinery:
+    plugins:
+      sites:
+        title: Sites
+    sites:
+      admin:
+        sites:
+          actions:
+            create_new: Lag en ny Site
+            reorder: Endre rekkefølgen på Sites
+            reorder_done: Ferdig å endre rekkefølgen Sites
+          records:
+            title: Sites
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Sites enda. Klikk på "Lag en ny Site" for å legge til din første site.
+          site:
+            view_live_html: Vis hvordan denne site ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne site
+            delete: Fjern denne site permanent
+      sites:
+        show:
+          other: Andre Sites
+  activerecord:
+    attributes:
+      'refinery/sites/site':
+        name: Name
+        description: Description
+        photo: Photo
+        location: Location

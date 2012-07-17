@@ -1,0 +1,17 @@
+<section id="body_content">
+  <section id="body">
+    <div id="homes" class="container">
+      <% @homes.each do |home| %>
+      <div class="row">
+        <div class="span3">
+          <%= image_fu home.photo, "200x200", class: "image-align-#{cycle("left","left")}"%>
+        </div>
+        <div class="span9">
+          <h2><%= link_to home.name, refinery.homes_home_path(home) %></h2>
+          <%= raw home.description %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </section>
+</section>

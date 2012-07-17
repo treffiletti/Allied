@@ -1,0 +1,13 @@
+<section id="body_content">
+  <section id="body">
+    <div id="home">
+      <%= image_fu @home.photo, "400x400", class: "image-align-left" %>
+      <h1><%= @home.name %></h1>
+      <p><b>description:</b> <%= @home.description %></p>
+      <p><b>Price:</b> <%= @home.price %></p>
+      <p><b>Square Feet:</b> <%= @home.square_feet %></p>
+      <%= raw @home.description %>
+      <p class="back"><%= link_to "Back to Homes", refinery.homes_homes_path %></p>
+    </div>
+  </section>
+</section>

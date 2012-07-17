@@ -1,0 +1,32 @@
+es:
+  refinery:
+    plugins:
+      homes:
+        title: Homes
+#        article: masculino/femenino
+    homes:
+      admin:
+        homes:
+          actions:
+            create_new: Crear nuevo home
+            reorder: Reordenar homes
+            reorder_done: Reordenación de homes completada
+          records:
+            title: Homes
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay homes todavía. Pulsa en "Crear nuevo Home" para crear tu primer home.
+          home:
+            view_live_html: Ver este home como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este home
+            delete: Borrar este home para siempre
+      homes:
+        show:
+          other: Otros homes
+  activerecord:
+    attributes:
+      'refinery/homes/home':
+        name: Name
+        description: Description
+        price: Price
+        square_feet: Square Feet
+        photo: photo

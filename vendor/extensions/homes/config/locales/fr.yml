@@ -1,0 +1,31 @@
+fr:
+  refinery:
+    plugins:
+      homes:
+        title: Homes
+    homes:
+      admin:
+        homes:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Home
+            reorder: Réordonner les Homes
+            reorder_done: Fin de réordonnancement des Homes
+          records:
+            title: Homes
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Home. Cliquer sur "Créer un(e) nouve(au/l/lle) Home" pour créer votre premi(er/ère) home.'
+          home:
+            view_live_html: Voir ce(t/tte) home <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) home
+            delete: Supprimer définitivement ce(t/tte) home
+      homes:
+        show:
+          other: Autres Homes
+  activerecord:
+    attributes:
+      'refinery/homes/home':
+        name: Name
+        description: Description
+        price: Price
+        square_feet: Square Feet
+        photo: photo

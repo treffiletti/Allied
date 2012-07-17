@@ -1,0 +1,31 @@
+nb:
+  refinery:
+    plugins:
+      homes:
+        title: Homes
+    homes:
+      admin:
+        homes:
+          actions:
+            create_new: Lag en ny Home
+            reorder: Endre rekkefølgen på Homes
+            reorder_done: Ferdig å endre rekkefølgen Homes
+          records:
+            title: Homes
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Homes enda. Klikk på "Lag en ny Home" for å legge til din første home.
+          home:
+            view_live_html: Vis hvordan denne home ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne home
+            delete: Fjern denne home permanent
+      homes:
+        show:
+          other: Andre Homes
+  activerecord:
+    attributes:
+      'refinery/homes/home':
+        name: Name
+        description: Description
+        price: Price
+        square_feet: Square Feet
+        photo: photo

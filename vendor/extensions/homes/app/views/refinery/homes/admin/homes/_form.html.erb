@@ -1,0 +1,45 @@
+<%= form_for [refinery, :homes_admin, @home] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @home,
+              :include_object_name => true %>
+
+  
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest'  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :description -%>
+    <%= f.text_field :description  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :price -%>
+    <%= f.number_field :price  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :square_feet -%>
+    <%= f.number_field :square_feet  -%>
+
+  </div>
+  
+  <div class='field'>
+    <%= f.label :photo -%>
+    <%= render '/refinery/admin/image_picker',
+               :f => f,
+               :field => :photo_id,
+               :image => @home.photo,
+               :toggle_image_display => false %>
+
+  </div>
+  
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.homes.admin.homes.home'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @home.name) %>
+<% end -%>

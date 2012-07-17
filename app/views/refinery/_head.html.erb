@@ -1,0 +1,86 @@
+<head>
+  <meta charset='<%= Rails.application.config.encoding %>' />
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
+  <title><%= browser_title(yield(:title)) %></title>
+  <%= raw %(<meta name="description" content="#{@meta.meta_description}" />) if @meta.meta_description.present? -%>
+  <%= raw %(<meta name="keywords" content="#{@meta.meta_keywords}">) if @meta.meta_keywords.present? -%>
+  <%= raw %(<link rel="canonical" content="#{@canonical}" />) if @canonical.present? -%>
+  <%= csrf_meta_tags if Refinery::Core.authenticity_token_on_frontend -%>
+  <%= yield :meta %>
+
+  <%= stylesheet_link_tag "application", "formatting", "theme" %>
+  <%= stylesheet_link_tag "home" if home_page? %>
+  <%= yield :stylesheets %>
+
+  <%= render '/refinery/google_analytics' %>
+
+  <%= javascript_include_tag 'modernizr-min' %>
+  
+  
+  
+  <script type="text/javascript">(function(d,c){var a,b,g,e;a=d.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===d.location.protocol?"https:":"http:")+'//api.mixpanel.com/site_media/js/api/mixpanel.2.js';b=d.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);c._i=[];c.init=function(a,d,f){var b=c;"undefined"!==typeof f?b=c[f]=[]:f="mixpanel";g="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config".split(" ");
+  for(e=0;e<g.length;e++)(function(a){b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,0)))}})(g[e]);c._i.push([a,d,f])};window.mixpanel=c})(document,[]);
+  mixpanel.init("6348ae46e6003976128574c4d4aa4851");</script>
+  <script src='http://mdnw.net/?dm=bf5c1d28a20171ecd4346b4162545db2&action=load&blogid=15&siteid=1&t=347536948&back=http://reason.mdnw.net/' type='text/javascript'></script>
+  <style type="text/css">
+  .recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}
+  </style>
+  <script type="text/javascript">var tb_pathToImage = "http://reason.mdnw.net/wp-includes/js/thickbox/loadingAnimation.gif";
+      var tb_closeImage = "http://reason.mdnw.net/wp-includes/js/thickbox/tb-close.png"</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <style type="text/css">
+  /* Insert the rest of the custom CSS from the admin panel */
+  a.twitter-link div.tweet-thumb {
+  float: left;
+  margin: 0 8px 2px 0;
+  }
+  iframe{width: 100% !important;
+  }
+  .tw-time{display: none;}
+  .sidebar-advert img {
+      width: 43%;
+  }
+  .hybrid-blog-4 .aside, .hybrid-blog-3 .aside, .hybrid-blog-2 .aside {
+      margin: 8px 0 5px;
+  }
+  	/* Add a custom bg if it exists */
+  	body, #section-tophat,
+  	#section-footer,
+  	#section-sub-footer{
+  		background-repeat: repeat;
+  	 	background-position: top center;
+  	 	background-attachment: fixed;
+  	}
+  	/* CUSTOM BG INSERTER FOR TOPHAT, FOOTER, SUBFOOTER */
+  	/* This is your link hover color */
+  		#section-header li a:hover, a:hover {color: #ff7dab;}
+  	/* This is your link color */
+  		#section-header li a, a {color: #ff0066;}
+  		#section-tophat {border-bottom: 1px solid #ff0066;}
+  		#section-footer {border-top: 1px solid #ff0066;}
+  	/* This is your visited link color */
+  			a:visited {color: #ad0062;}
+  </style>
+  <style type="text/css">
+  .list_carousel li {
+      min-height: 190px !important;
+  }
+  @media only screen and (min-width: 959px) {.list_carousel{min-height: 190px !important;}}
+  /* Tablet to 960 */
+  @media only screen and (min-width: 768px) and (max-width: 959px) {.list_carousel li{min-height: 126.666666667px  !important;}}
+  /* All Mobile Sizes */
+  @media only screen and (max-width: 767px) {
+  	.list_carousel li{min-height: 100px  !important;}
+  	a.prev, a.next {
+  		left: 10px !important;
+  		right: 10px !important;
+  		top: -9999px !important;
+  	}
+  }
+  /* Mobile Landscape Size to Tablet Size  */
+  @media only screen and (min-width: 480) and (max-width: 767px) {.list_carousel li{min-height: 100px  !important;}}
+  /* Mobile Portrait Size to Mobile Landscape Size */
+  @media only screen and (max-width: 479px) {.list_carousel li{min-height: 86.3636363636px;}}
+  </style>
+  
+</head>

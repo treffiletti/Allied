@@ -1,0 +1,31 @@
+es:
+  refinery:
+    plugins:
+      sites:
+        title: Sites
+#        article: masculino/femenino
+    sites:
+      admin:
+        sites:
+          actions:
+            create_new: Crear nuevo site
+            reorder: Reordenar sites
+            reorder_done: Reordenación de sites completada
+          records:
+            title: Sites
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay sites todavía. Pulsa en "Crear nuevo Site" para crear tu primer site.
+          site:
+            view_live_html: Ver este site como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este site
+            delete: Borrar este site para siempre
+      sites:
+        show:
+          other: Otros sites
+  activerecord:
+    attributes:
+      'refinery/sites/site':
+        name: Name
+        description: Description
+        photo: Photo
+        location: Location

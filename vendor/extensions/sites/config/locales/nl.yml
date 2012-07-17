@@ -1,0 +1,30 @@
+nl:
+  refinery:
+    plugins:
+      sites:
+        title: Sites
+    sites:
+      admin:
+        sites:
+          actions:
+            create_new: Maak een nieuwe Site
+            reorder: Wijzig de volgorde van de Sites
+            reorder_done: Klaar met het wijzingen van de volgorde van de Sites
+          records:
+            title: Sites
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Sites. Druk op 'Maak een nieuwe Site' om de eerste aan te maken.
+          site:
+            view_live_html: Bekijk deze site op de website <br/><em>(opent een nieuw venster)</em>
+            edit: Bewerk deze site
+            delete: Verwijder deze site voor eeuwig
+      sites:
+        show:
+          other: Andere Sites
+  activerecord:
+    attributes:
+      'refinery/sites/site':
+        name: Name
+        description: Description
+        photo: Photo
+        location: Location
